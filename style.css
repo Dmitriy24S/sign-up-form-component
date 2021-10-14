@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-image: url(./images/bg-intro-mobile.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: hsl(0, 100%, 74%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  width: 340px;
+  color: white;
+  padding: 0 20px;
+}
+.text {
+  margin: 78px 0 45px;
+  letter-spacing: 0.2px;
+}
+.text h1 {
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+.text p {
+  font-size: 15px;
+}
+/* form */
+.sign-up-form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 1px 9px 4px 0px rgb(56 56 56 / 28%);
+}
+.sign-up-form input {
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid hsl(249deg 10% 26% / 18%);
+}
+::placeholder {
+  color: hsla(249, 10%, 26%, 0.719);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+}
+.notice {
+  color: hsl(246, 25%, 77%);
+  font-size: 12px;
+  font-weight: 500;
+}
+span {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
+/* buttons */
+button {
+  color: white;
+  font-family: inherit;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 50px;
+  margin-bottom: 20px;
+  line-height: 2;
+  letter-spacing: 0.8px;
+}
+.try-free-btn {
+  margin-bottom: 25px;
+  background-color: hsl(248, 32%, 49%);
+  box-shadow: 1px 9px 4px 0px rgb(56 56 56 / 28%);
+}
+.submit-for-btn {
+  padding: 10px 30px;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: hsl(154, 59%, 51%);
+  box-shadow: 0px -3px 6px -2px rgb(56 56 56 / 28%) inset;
+}
+.try-free-btn:hover {
+  background-color: hsl(248, 32%, 55%);
+}
+.submit-for-btn:hover {
+  opacity: 0.8;
+}
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+a:hover {
+  opacity: 0.7;
+}
