@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800");
 *,
 ::after,
 ::before {
@@ -6,7 +6,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 body {
@@ -14,7 +17,6 @@ body {
   text-align: center;
   background-image: url(./images/bg-intro-mobile.png);
   background-size: contain;
-  background-repeat: no-repeat;
   background-position: center center;
   background-color: hsl(0, 100%, 74%);
   display: flex;
@@ -34,9 +36,13 @@ body {
 .text h1 {
   font-size: 27px;
   margin-bottom: 20px;
+  transform: translateX(-100%);
+  animation: slideinleft 0.5s ease forwards;
 }
 .text p {
   font-size: 15px;
+  transform: translateX(100%);
+  animation: slideinright 0.5s ease forwards;
 }
 /* form */
 .sign-up-form {
@@ -44,27 +50,40 @@ body {
   display: flex;
   flex-direction: column;
   padding: 24px;
-  border-radius: 8px;
   margin-bottom: 25px;
+  border-radius: 8px;
   box-shadow: 1px 9px 4px 0px rgb(56 56 56 / 28%);
 }
-.sign-up-form input {
-  font-weight: 600;
+.input-container {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
+}
+.sign-up-form input {
+  position: relative;
+  font-weight: 600;
   padding: 15px;
+  margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid hsl(249deg 10% 26% / 18%);
+  outline-color: hsl(248, 32%, 49%);
+  caret-color: hsl(248, 32%, 49%);
+  font-family: inherit;
+  font-size: 14px;
 }
 ::placeholder {
-  color: hsla(249, 10%, 26%, 0.719);
+  color: hsla(249, 10%, 39%, 0.719);
   font-family: inherit;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 15px;
 }
 .notice {
   color: hsl(246, 25%, 77%);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
+}
+.notice a {
+  text-decoration: none;
 }
 span {
   color: hsl(0, 100%, 74%);
@@ -72,14 +91,14 @@ span {
 }
 /* buttons */
 button {
-  color: white;
-  font-family: inherit;
   width: 100%;
   cursor: pointer;
   border: none;
   border-radius: 8px;
   padding: 15px 50px;
   margin-bottom: 20px;
+  color: white;
+  font-family: inherit;
   line-height: 2;
   letter-spacing: 0.8px;
 }
@@ -87,13 +106,14 @@ button {
   margin-bottom: 25px;
   background-color: hsl(248, 32%, 49%);
   box-shadow: 1px 9px 4px 0px rgb(56 56 56 / 28%);
+  font-weight: 300;
 }
 .submit-for-btn {
-  padding: 10px 30px;
+  background-color: hsl(154, 59%, 51%);
   font-size: 15px;
   text-transform: uppercase;
+  padding: 10px 30px;
   border-radius: 5px;
-  background-color: hsl(154, 59%, 51%);
   box-shadow: 0px -3px 6px -2px rgb(56 56 56 / 28%) inset;
 }
 .try-free-btn:hover {
@@ -102,15 +122,85 @@ button {
 .submit-for-btn:hover {
   opacity: 0.8;
 }
+/* error */
+.sign-up-form .error {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+.error-img {
+  display: block;
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 96%;
+}
+.error-msg {
+  color: hsl(0, 100%, 74%);
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+}
 /* footer */
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-bottom: 15px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 a:hover {
   opacity: 0.7;
+}
+@media (min-width: 1024px) {
+  body {
+    background-image: url(./images/bg-intro-desktop.png);
+    background-size: cover;
+    justify-content: center;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .text {
+    max-width: 550px;
+    text-align: left;
+    margin: 140px 40px 45px 0px;
+  }
+  .text h1 {
+    font-size: 47px;
+  }
+  .text p {
+    font-size: 16px;
+  }
+  /* form desktop */
+  .sign-up-form {
+    margin-bottom: 0px;
+  }
+  .form-container {
+    width: 524px;
+  }
+  .sign-up-form {
+    padding: 40px;
+  }
+  .notice {
+    font-weight: 400;
+  }
+  /* button desktop */
+  button {
+    padding: 15px 35px;
+  }
+}
+/* Animations */
+@keyframes slideinleft {
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideinright {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
