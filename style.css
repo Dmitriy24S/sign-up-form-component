@@ -57,13 +57,13 @@ body {
 .input-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 31px;
+  position: relative;
 }
 .sign-up-form input {
   position: relative;
   font-weight: 600;
   padding: 15px;
-  margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid hsl(249deg 10% 26% / 18%);
   outline-color: hsl(248, 32%, 49%);
@@ -131,7 +131,7 @@ button {
 }
 /* error */
 .sign-up-form .error {
-  border: 2px solid hsl(0, 100%, 74%);
+  outline: 2px solid hsl(0, 100%, 74%);
 }
 .error-img {
   display: block;
@@ -142,9 +142,11 @@ button {
 }
 .error-msg {
   color: hsl(0, 100%, 74%);
-  text-align: right;
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 500;
+  position: absolute;
+  bottom: -22px;
+  right: 0;
 }
 /* footer */
 .attribution {
