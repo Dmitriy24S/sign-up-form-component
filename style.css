@@ -34,13 +34,13 @@ body {
   letter-spacing: 0.2px;
 }
 .text h1 {
-  font-size: 27px;
+  font-size: 1.69rem;
   margin-bottom: 20px;
   transform: translateX(-100%);
   animation: slideinleft 0.5s ease forwards;
 }
 .text p {
-  font-size: 15px;
+  font-size: 0.94rem;
   transform: translateX(100%);
   animation: slideinright 0.5s ease forwards;
 }
@@ -69,17 +69,17 @@ body {
   outline-color: hsl(248, 32%, 49%);
   caret-color: hsl(248, 32%, 49%);
   font-family: inherit;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 ::placeholder {
   color: hsla(249, 10%, 39%, 0.719);
   font-family: inherit;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 .notice {
   color: hsl(246, 25%, 77%);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 .notice a {
@@ -110,7 +110,7 @@ button {
 }
 .submit-for-btn {
   background-color: hsl(154, 59%, 51%);
-  font-size: 15px;
+  font-size: 0.94rem;
   text-transform: uppercase;
   padding: 10px 30px;
   border-radius: 5px;
@@ -120,7 +120,14 @@ button {
   background-color: hsl(248, 32%, 55%);
 }
 .submit-for-btn:hover {
-  opacity: 0.8;
+  opacity: 0.9;
+}
+.submit-for-btn:active {
+  opacity: 1;
+}
+.submit-for-btn:active {
+  box-shadow: 0 0 hsl(154deg 59% 45%);
+  transform: translateY(2px);
 }
 /* error */
 .sign-up-form .error {
@@ -135,7 +142,7 @@ button {
 }
 .error-msg {
   color: hsl(0, 100%, 74%);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   position: absolute;
   bottom: -22px;
@@ -143,7 +150,7 @@ button {
 }
 /* footer */
 .attribution {
-  font-size: 11px;
+  font-size: 0.69rem;
   text-align: center;
 }
 .attribution a {
@@ -171,10 +178,10 @@ a:hover {
     margin: 140px 40px 45px 0px;
   }
   .text h1 {
-    font-size: 47px;
+    font-size: 3rem;
   }
   .text p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   /* form desktop */
   .sign-up-form {
